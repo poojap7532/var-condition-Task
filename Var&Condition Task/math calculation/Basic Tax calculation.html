@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1>Basic Tax Calculator</h1>
+
+    <label for="basic">Enter Total Amount :</label>
+    <input type="text" id="basic"><br><br>
+
+    <label for="tax">Enter Tax % :</label>
+    <input type="text" id="tax"><br><br>
+
+    <input type="submit" onclick="myFunction()"><br><br>
+
+    <p>Answer Is:</p>
+    <p id="result"></p>
+    <script>
+        function myFunction(){
+            var a = parseInt(document.getElementById('basic').value);
+            var b = parseInt(document.getElementById('tax').value);
+            var c = a * (b/100) + a;
+            document.getElementById('result').innerHTML = c;
+        }
+    </script>    
+</body>
+</html>
